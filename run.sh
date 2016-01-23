@@ -1,2 +1,2 @@
 #!/bin/sh
-Rscript LR.R
+Rscript allImageNoise.R
