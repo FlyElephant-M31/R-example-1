@@ -2,6 +2,14 @@
 # можно для ОСШ 20, 10 и 0 дБ можно брать СКО нормального шума
 # 0.03, 0.1 и 0.3
 
+con <- file("data")
+sink(con, append = TRUE, type = "output")
+sink(con, append = TRUE, type = "message")
+
+
+install.packages('foreach') 
+install.packages('jpeg') 
+
 MyNorm = function(data)
 {
   data <- data - min(data)
@@ -63,8 +71,6 @@ system.time(foreach(imInd = 1:2, .packages = 'jpeg') %do% # %dopar%
       }
     }
   }
-  
-  print(somesnr)
-  save(somesnr, file = paste(procdir, fls[[imInd]], 'normnoise.rdata', sep = ""))
+  write(somesnr, file = 'data')
 })
 
