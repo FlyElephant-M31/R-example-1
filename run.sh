@@ -1,2 +1,2 @@
 #!/bin/sh
-Rscript allImageNoise.R
+Rscript tmp2.R
