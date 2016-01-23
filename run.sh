@@ -1,2 +1,2 @@
 #!/bin/sh
-Rscript allImageNoise.R
+nohup R CMD BATCH allImageNoise.R
