@@ -7,8 +7,8 @@ sink(con, append = TRUE, type = "output")
 sink(con, append = TRUE, type = "message")
 
 
-install.packages('foreach') 
-install.packages('jpeg') 
+install.packages('foreach', lib='~/workdir') 
+install.packages('jpeg', lib='~/workdir') 
 
 MyNorm = function(data)
 {
