@@ -17,6 +17,8 @@ fls <- list.files(procdir, pattern = "\\.jpg$", ignore.case = TRUE)
 snrs <- c(20, 10, 0)
 starts <- 1
 
+save(snrs, file = '1.rdata')
+
 library(foreach)
 library(jpeg)
 
