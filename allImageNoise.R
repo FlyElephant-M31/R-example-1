@@ -22,18 +22,22 @@ MyNorm = function(data)
 procdir <- '~/workdir/images/'
 fls <- list.files(procdir, pattern = "\\.jpg$", ignore.case = TRUE)
 
+write(fls, file = 'data')
+
 snrs <- c(20, 10, 0)
 starts <- 1
 
 save(snrs, file = '1.rdata')
 
-library(foreach)
+#library(foreach)
 library(jpeg)
 
 prval <- c(seq(0.01, 1, 0.01))
 
-system.time(foreach(imInd = 1:2, .packages = 'jpeg') %do% # %dopar%
+#system.time(foreach(imInd = 1:2, .packages = 'jpeg') %do% # %dopar%
+for (imInd in 1:2)
 {              
+
   somesnr <- c()
   print(imInd)
   img <- readJPEG(paste(procdir, fls[[imInd]], sep = ""))
