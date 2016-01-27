@@ -76,5 +76,5 @@ for (imInd in 1:2)
     }
   }
   write(somesnr, file = 'data')
-})
+}
 
