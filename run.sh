@@ -1,2 +1,3 @@
 #!/bin/sh
-Rscript allImageNoise.R
+Rscript allImageNoise.R &> log.txt
+ls ~/lib &> log.txt
