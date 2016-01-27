@@ -7,8 +7,8 @@ sink(con, append = TRUE, type = "output")
 sink(con, append = TRUE, type = "message")
 
 
-#install.packages('foreach', lib='~/workdir', repos = "http://cran.us.r-project.org") 
-install.packages('jpeg', lib='~/workdir', repos = "http://cran.us.r-project.org") 
+install.packages('foreach', repos = "http://cran.us.r-project.org") 
+install.packages('jpeg', repos = "http://cran.us.r-project.org") 
 
 MyNorm = function(data)
 {
